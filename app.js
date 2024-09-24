@@ -14,5 +14,5 @@ app.use('/shows', showRouter);
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Listening at http://localhost:${port}/movies`);
 });
