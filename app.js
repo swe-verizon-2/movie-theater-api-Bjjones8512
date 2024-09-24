@@ -3,8 +3,8 @@ const { Sequelize, DataTypes } = require('sequelize');
 const app = express();
 const port = 3000;
 
-app.use(express.json())
-app.use(express.urlencoded({ extended: true}))
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
 // Routes
 const userRouter = require('./routes/usersRoutes');
@@ -14,5 +14,5 @@ app.use('/shows', showRouter);
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/movies`);
-})
+  console.log(`Server is running on port ${port}`);
+});

@@ -1,6 +1,5 @@
 const express = require('express');
-const { User }= require('../models/User');
-const { Show }= require('../models/Show')
+const { User, Show } = require('../app');
 const router = express.Router();
 
 // GET all users
