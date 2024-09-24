@@ -4,11 +4,11 @@ const app = express();
 const port = 3000;
 
 app.use(express.json())
-app.use(express.urlencoded())
+app.use(express.urlencoded({ extended: true}))
 
 // Routes
-const userRouter = require('./routes/users');
-const showRouter = require('./routes/shows');
+const userRouter = require('./routes/usersRoutes');
+const showRouter = require('./routes/showsRoutes');
 app.use('/users', userRouter);
 app.use('/shows', showRouter);
 

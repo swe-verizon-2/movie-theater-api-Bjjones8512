@@ -1,6 +1,6 @@
 const express = require('express');
-const { Show, User } = require('../app');
-const { body, query } = require('express-validator');
+const { Show } = require('../models/Show');
+const { User } = require('../models/User');
 const router = express.Router();
 
 // GET all shows
