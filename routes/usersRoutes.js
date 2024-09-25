@@ -1,5 +1,5 @@
 const express = require('express');
-const { User, Show } = require('../app');
+const { User, Show } = require('../models'); // Correct import of models
 const router = express.Router();
 
 // GET all users
