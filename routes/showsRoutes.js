@@ -1,6 +1,6 @@
 const express = require('express');
-const { Show, User } = require('../app');
-const { body, query } = require('express-validator');
+const { Show, User } = require('../models'); // Correct import of models
+const { body } = require('express-validator');
 const router = express.Router();
 
 // GET all shows
@@ -33,7 +33,7 @@ router.get('/:id/users', async (req, res) => {
 
 // PUT update the available property of a show
 router.put('/:id', [
-  body('available').isBoolean()
+  body('available').isBoolean() // Validation for boolean values
 ], async (req, res) => {
   const show = await Show.findByPk(req.params.id);
   if (show) {
